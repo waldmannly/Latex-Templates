@@ -1,0 +1,183 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%               FORMATTING AND COLORING         %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[xcolor=dvipsnames]{beamer}
+%\RequirePackage[2017/04/15]{latexrelease}
+\definecolor{Fuchsia}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{F7BF0A}
+
+
+%\definecolor{LightGrey}{HTML}{666666}
+
+\colorlet{accent}{Fuchsia}
+\colorlet{emphasis}{SlateGrey}
+
+\usepackage{caption}
+
+\usetheme{CambridgeUS}
+\useinnertheme{rectangles}
+\useoutertheme{infolines}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%this adds in the circles to the right of background
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\def\insertsubsectionnavigationhorizontal#1#2#3{%
+    \hbox to #1{{%
+        \usebeamerfont{subsection in head/foot}\usebeamercolor[fg]{subsection in head/foot}
+        \beamer@currentsubsection=0%
+        \def\sectionentry##1##2##3##4##5{}%
+        \def\slideentry##1##2##3##4##5##6{\ifnum##6=\c@part\ifnum##1=\c@section%
+      \ifnum##2>\beamer@currentsubsection%
+      \box\beamer@sectionbox\hskip1.875ex plus1fill%
+            \hbox to 0pt{%
+                    \global\beamer@section@min@dim\beamer@tempdim
+                        \beamer@link(##4){%
+                            \usebeamerfont{mini frame}%
+                            \ifnum\c@section=##1%
+                                \ifnum\c@subsection=##2%
+                                    \usebeamercolor[fg]{mini frame}%
+                                    \ifnum\c@subsectionslide=##3%
+                                        \usebeamertemplate{mini frame}%\beamer@minislidehilight%
+                                    \else%
+                                        \usebeamertemplate{mini frame in current subsection}%\beamer@minisliderowhilight%
+                                    \fi%
+                                \else%
+                                    \usebeamercolor{mini frame}%
+                                    %\color{fg!50!bg}%
+                                    \usebeamertemplate{mini frame in other subsection}%\beamer@minislide%
+                                \fi%
+                            \else%
+                                \usebeamercolor{mini frame}%
+                                                                %\color{fg!50!bg}%
+                                \usebeamertemplate{mini frame in other subsection}%\beamer@minislide%
+                            \fi%
+                        }%
+                \hskip-10cm plus 1fil%
+            }%
+            \fi\fi\fi\ignorespaces
+        }%
+        #2\hskip.3cm\setbox\beamer@sectionbox=\hbox{}%
+        \hskip-1.875ex plus-1fill\dohead%
+        \box\beamer@sectionbox\hfil\hskip.3cm%
+        #3
+    }}
+}
+
+\setbeamertemplate{footline}%{infolines theme}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor\expandafter\beamer@ifempty\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot} %\insertshortdate{} % remove the date from each slide 
+    % could insert text here to make it display in the footer 
+    \hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+\setbeamertemplate{headline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.65ex,dp=1.5ex,right]{section in head/foot}%
+    \usebeamerfont{section in head/foot}\bfseries\insertsectionhead\hspace*{2ex}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.65ex,dp=1.5ex,left]{subsection in head/foot}%
+    \usebeamerfont{subsection in head/foot}\setbeamercolor{section in head/foot}{fg=Fuchsia!125,bg=white}
+    \vspace*{.01cm}\insertsubsectionnavigationhorizontal{.5cm}{\hskip-.1cm}{}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+% gets rid of navigation symbols
+\setbeamertemplate{navigation symbols}{}
+% add figures numbering
+\setbeamertemplate{caption}[numbered]
+
+\setbeamercolor{frametitle}{fg=Fuchsia,bg=SlateGrey}
+\setbeamercolor{section in head/foot}{fg= SlateGrey!75, bg=Fuchsia!45}
+\setbeamercolor{title in head/foot}{fg=Fuchsia, bg=SlateGrey!45}
+\setbeamercolor{subsection in head/foot}{fg=Fuchsia, bg=Black!15}
+\setbeamercolor{author in head/foot}{bg=SlateGrey, fg=SlateGrey}
+\setbeamercolor{date in head/foot}{fg=Fuchsia, bg =SlateGrey!15}
+\setbeamercolor{structure}{fg=Fuchsia, bg= SlateGrey}
+\setbeamercolor{frametitle}{fg= Fuchsia}
+\setbeamercolor{title}{fg=Fuchsia}
+\setbeamercolor*{palette tertiary}{bg=Fuchsia}
+\setbeamercolor{section in sidebar}{fg=Fuchsia}
+\setbeamercolor{titlelike}{bg =SlateGrey}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End of customizing the theme layout and colors 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{comment}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{pslatex}
+\usepackage{fontawesome}
+\usepackage{animate}
+
+\usepackage{xmpmulti}
+
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%          Beginning of the slide deck          %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%changing the color of bullet points 
+%\newenvironment{a2env}{\only{\setbeamercolor{local structure}{fg=climateChange}}}{}
+%\newenvironment{rtenv}{\only{\setbeamercolor{local structure}{fg=recentTrends}}}{}
+%%%%%%%%%%%%
+%title page%
+%%%%%%%%%%%%
+\title[UCF Math Club Meeting 1]{Welcome to the Math Club}
+\author{}
+\institute{University of Central Florida}
+\date{\scriptsize{September 7th, 2018}}
+
+\begin{document}
+\begin{frame}
+  \titlepage
+  \vfill
+ % \includegraphics[width=.1\linewidth]{University-of-Central-Florida-logo-Black.png} \hfill %\includegraphics[width=.11\linewidth]{Harvard_Forest_logo_high_res.jpg}
+\end{frame}
+
+\section{Introduction}
+\subsection{}
+\begin{frame}{House Keeping}
+meeting times and rest of planned meetings 
+\end{frame}
+
+\begin{frame}{Officer Introductions}
+
+list the positions 
+
+\end{frame}
+
+\begin{frame}{Dues, T-shirts, and JMM}
+Dues - \$20
+you get a t-shirt and can apply for JMM travel assistance\newline
+\vspace{2cm}
+We will be talking more about JMM in later meetings but if you think you might want to go be aware it will somewhere aroun \$275 which include plane, conference registration, and hotels. (SGA will cover up to 50\% of the travel cost (maxing out at \$3000)) so there is a limit on how many people we can take. 
+
+\end{frame}
+
+
+
+\end{document}
+

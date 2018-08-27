@@ -1,0 +1,163 @@
+
+
+
+
+% -----------------------------------------------
+% The preamble that follows can be ignored. Go on
+% down\textbf{\upshape{to}} the section that says "START HERE" 
+% -----------------------------------------------
+
+\documentclass[10pt]{article}
+
+
+\usepackage[margin= 1.25 in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+%usepackage[linesnumbered,ruled]{algorithm2e}
+%DontPrintSemicolon  
+
+\newcommand{\R}{\mathbb{R}}  
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+
+\usepackage{mathtools}
+
+\usepackage[T1]{fontenc}
+\usepackage{titling}
+
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+%gets rid of qed symbol
+\renewcommand{\qedsymbol}{}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\begin{document}
+	
+	% ------------------------------------------ %
+	%                 START HERE                 %
+	% ------------------------------------------ %
+	\setlength{\topmargin}{0in}
+	
+	\setlength{\droptitle}{-10em} 
+	\title{Graph Theory Group Quiz} 
+	\author{Evan Waldmann, Ian Lasky, Andrew Matrai, Aidan Lakshman, \\
+    Cristian Perez, Cameron Douglas, Hanna Reed, Amanda Vasquez} %	
+	\maketitle
+	
+	% -----------------------------------------------------
+	% The following two environments (theorem, proof) are
+	% where you will enter the statement and proof of your
+	% first problem for this assignment.
+	%
+	% In the theorem environment, you can replace the word
+	% "theorem" in the \begin and \end commands with
+	% "exercise", "problem", "lemma", etc., depending on
+	% what you are submitting. Replace the "x.yz" with the
+	% appropriate number for your problem.
+	%
+	% If your problem does not involve a formal proof, you
+	% can change the word "proof" in the \begin and \end
+	% commands with "solution".
+	% -----------------------------------------------------
+	
+	\begin{problem}{1}
+		Let G be a simple graph having no isolated vertex and no induced subgraph with exactly two edges. Prove G is a complete graph. 
+	\end{problem}
+	
+	\begin{solution}\quad\newline%https://math.stackexchange.com/questions/1162687/let-g-be-a-simple-graph-having-no-isolated-vertex-and-no-induced-subgraph-with
+    
+    Let G be a simple graph with vertices $u$ and $v$. Suppose that G is connected and that $u$ and $v$ are in different components. Since $u$ and $v$ are not isolated, then there is a vertex $u'$ adjacent to $u$ and a vertex $v'$ adjacent to $v$. From the induced subgraph $\{u, u', v, v'\}$, then $uu'$ and $vv'$ are part of it. And since there cannot be any isolated parts of the graph, there must be an edge $uv$, $uv'$, $u'v$, or $u'v'$. However, then $u$ and $v$ would no longer be in separate components. A contradiction. Thus, G is connected.
+    
+    Now suppose $G$ is not complete. Let $A$ be the maximal complete subgraph of $G$ with $u\notin A$. Without loss of generality, we can safely assume that $u$ is adjacent to some vertex $a\in A$. Let $b$ be any vertex in $A$ that is distinct from $a$ and we can see that the subgraph is an induced subgraph. We are assuming that edge $au$ is in $G$ and since $a,b$ are in complete graph $A$ we also have $ab$ in $G$. Because the induced subgraph can't have only 2 edges we must also have $bu$ in $G$. Thus $u$ is adjacent to all vertices in $A$ meaning $A \cup$$\left\{u\right\}$ is a complete subgraph which contradicts the maximality of $A$.
+    
+    Therefore, $G$ must be a complete graph.
+    
+    \end{solution}
+	
+	
+	% -----------------------------------------------------
+	% Second problem
+	% -----------------------------------------------------
+	
+	\vspace{0.15in} % This just adds some space between problems 1 and 2.
+	
+	\begin{problem}{2}%https://www.coursera.org/learn/graphs/lecture/Z7cMv/mantels-theorem
+		Assume a connected graph G has $n$ vertices and $m$ edges. Prove that if $G$ contains no $3$-cycles then $m \leq \floor{\frac{n^2}{4}}$.
+	\end{problem}
+	
+	\begin{proof}\quad\newline
+    	
+        We will proceed with a proof by induction. First, suppose $G$ is a graph with a singular vertex. $m=0$ and clearly the stated property holds. Next suppose $G$ is a graph with $2$ vertices -- clearly $m \leq \floor{\frac{2^2}{4}} = 1$ as a graph with $2$ vertices can have at most one edge. Note in both of these cases, we need not discuss the requirement of no 3-cycles as there are less than 3 vertices. 
+        
+        Suppose the property holds for a graph with $k-2$ vertices and no $3$-cycles. Now suppose $G$ has $k$ vertices and contains no $3$-cycles. Let us choose $u,v\in V(G)$ such that $uv\in E(G)$. Since $G$ contains no $3$-cycles, $\forall w\in V(G)$, only one of $uw$ and $vw$ may exist in $E(G)$. Note that if this was not the case, we clearly would have a $3$-cycle $u-v-w\in G$. Since $G$ has $k$ vertices, we can see that it must be the case that $deg(u)+deg(v)\le k$. Now consider the graph $G-u-v$ which clearly contains $k-2$ vertices and contains no 3-cycles as $G$ contains no 3-cycles. By our inductive hypothesis, it must be the case that the size of $G-u-v$, $m_{G-u-v}$, satisfies the following: 
+        \begin{align*}
+        	m_{G-u-v} \le \left\lfloor\dfrac{(k-2)^2}{4}\right\rfloor
+        \end{align*}
+        Now, we may conclude that the size of $G$, $m$, satisfies the following: 
+        \begin{align*}
+        	m &= m_{G-u-v} + deg(u) +deg(v) - 1\\
+            &\le \left\lfloor\dfrac{(k-2)^2}{4}\right\rfloor + k - 1\\
+            &= \left\lfloor\dfrac{k^2-4k+4}{4}\right\rfloor +k - 1\\
+            &= \left\lfloor\dfrac{k^2}{4}\right\rfloor -(k-1) + (k-1) = \left\lfloor\dfrac{k^2}{4}\right\rfloor
+        \end{align*}
+        
+        and hence the graph $G$ satisfies the property. Thus, by induction, a graph with $n$ vertices and $m$ edges and no 3-cycles satisfies $m \leq \floor{(\frac{n^2}{4})}$. 
+       \renewcommand{\qedsymbol}{$\blacksquare$}
+        
+	\end{proof}
+	
+	% -----------------------------------------------------
+	% Third problem
+	% -----------------------------------------------------
+	
+	\vspace{0.15in} % This adds some space between problems 2 and 3.
+	
+	\begin{problem}{3}
+		Prove that every simple graph with at least two vertices has two vertices of equal degree. 
+	\end{problem}
+    
+    \begin{proof}\quad\newline%http://www-users.math.umn.edu/~akhmedov/M4707Finals.pdf
+   A graph can either be connected or disconnected, thus we have two cases to consider for the simple graph G with $|V(G)| = n \geq 2$ . 
+  
+\textbf{Case 1:} First assume that G is connected. Then G can not have a vertex of degree 0 in G, so for every vertex v in G, we have that $1 \leq \Delta (v) \leq n- 1$. This means the set of vertex degrees is a subset of $S = \{1, 2, ... , n - 1\}$. Since the graph G has n vertices, using the  pigeon-hole principle we can find two vertices of the same degree in G.
+
+\textbf{Case 2:} Now assume that G is not connected. Then G can not have a vertex of degree $n - 1$, so for every vertex v in G, we have that $0 \leq \Delta (v) \leq n- 2$. This means the set of vertex degrees is a subset of vertex degrees is a subset of $S' = \{0, 1, 2, ..., n - 2\}$. Once again, using the pigeon-hole principle we can find two vertices of the same degree in G. \renewcommand{\qedsymbol}{$\blacksquare$}
+    \end{proof}
+	
+	
+	% -----------------------------------------------------
+	% Fourth problem
+	% -----------------------------------------------------
+	
+	\vspace{0.25in} % This adds some space between problems 2 and 3.
+	
+	\begin{problem}{4}
+		Prove an edge e of a connected graph G is a bridge if and only if e belongs to every spanning tree of G. 
+	\end{problem}
+	
+\begin{proof}\quad\newline
+$\Rightarrow$ Assume $e$ belongs to every spanning tree. Assume to the contrary that $e$ is not a bridge. Let $e = uv$. Since $e$ is not a bridge, there exists a unique path in some spanning tree, say $T$, such that $e \notin E(T)$. However, this contradicts our assumption that $e$ is in every spanning tree. Thus $e$ must be a bridge.\newline 
+
+
+$\Leftarrow$  
+	Assume $e \in G$ is a bridge connecting vertices $u,v$. Assume to the contrary that $e$ does not belong to every spanning tree. Therefore $\exists$ a tree, say $T$ such that $e \notin E(T)$. By Theorem 4.2, that means there exists a unique path $u - v$ such that $e \notin u - v$. That means that $e$ lies on a cycle of $G$. This contradicts the assumption that $e$ is a bridge, contradicting Theorem 4.1. Thus $e$ must belong to all spanning trees.
+    \renewcommand{\qedsymbol}{$\blacksquare$}
+    
+    \end{proof}
+	
+\end{document}
