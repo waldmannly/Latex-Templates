@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Invoice Template
+% LaTeX Template
+% Version 1.0 (3/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the invoice.cls file to be in the same directory as 
+% the .tex file. The invoice.cls file provides the style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT CONFIGURATION
+%----------------------------------------------------------------------------------------
+
+\documentclass{invoice} % Use the custom invoice class (invoice.cls)
+
+\def \tab {\hspace*{3ex}} % Define \tab to create some horizontal white space
+	
+\usepackage[bottom]{footmisc}
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADING SECTION
+%----------------------------------------------------------------------------------------
+\vspace*{-1cm}
+\centering{\Huge\bf Collegiate Mathematical Society} % Company providing the invoice
+\newline
+\vspace{2mm}
+\centering{\large  Budget for Food During Fall 2018 CMS Meetings}
+\vspace{3.5mm}
+%\bigskip\break % Whitespace
+\hrule % Horizontal line
+
+
+\begin{flushleft}
+{\bf Officers:} \newline
+\begin{tabular}{p{4cm} p{4cm} p{4cm}}
+    President & Evan Waldmann & Waldmannevan@knights.ucf.edu\\
+    Vice President & Sabrina Mai & sabrinamai@knights.ucf.edu\\
+   Treasurer & Ryan Bell & ryamayobell1@knights.ucf.edu\\
+   Event Coordinator & Zachariah Abueg & zacha@knights.ucf.edu\\
+   Secretary & Ashley Sanchez & Ashleysanchez1998@knights.ucf.edu\\
+\end{tabular}
+
+\hrule
+\end{flushleft}
+\vspace{2mm}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF EXPENSES
+%----------------------------------------------------------------------------------------
+
+\begin{invoiceTable}
+
+\feetype{Food for each meeting} % Fee category description
+
+\hourrow{3 Large Domino's Pizzas }{3}{7.99}{25.53} 
+\hourrow{2 2-Liter Bottles of Soda}{2}{1}{2}
+\hourrow{1 Miscellaneous Snack (cookies, chips, etc)}{1}{4}{4}
+
+\subtotal
+
+\setTotalCost{252.24}% 31.53 *8
+
+
+%------------------------------------------------
+
+
+
+%\subtotal* % Prints a subtotal, can be used multiple times
+
+%------------------------------------------------
+
+%\feetype{Hosting Expenses} % Fee category description
+
+%\feerow{Web Hosting: October, 2012}{60} % A flat fee service, note there is no hourly rate for this
+
+\end{invoiceTable}
+\vfill
+
+%----------------------------------------------------------------------------------------
+
+\begin{table}[ht!]
+\centering
+ \begin{tabular}{||l |l r ||} 
+ \hline
+ \multicolumn{3}{|c|}{List of CMS Meetings for FALL 2018} \\
+ \hline
+  & Meeting Name & Date \\  
+ \hline\hline
+ 1& Introduction to Math Club and World of Math & 9/7/18 \\ \hline
+ 2& Latex Resume and Homework Workshop &  9/14/18 \\ \hline
+ 3& An Introduction to Topology  & 9/28/18\\ \hline
+ 4& Workshop on Coding in R & 10/5/18  \\\hline
+ 5& Graduate School Talk & 10/19/18\\ \hline
+ 6& Workshop on Math Modeling (for COMAP MCM) & 10/26/18\\ \hline
+ 7& Research Opportunities (for Summer REU's) & 11/9/18\\ \hline
+ 8& Workshop on Coding in MATLAB & 11/16/18 \\
+ \hline
+ \end{tabular}
+\end{table}
+\vfill
+\null
+
+\end{document}

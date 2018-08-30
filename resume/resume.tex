@@ -1,0 +1,342 @@
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small{#2} \\
+      \textit{#3} &  \small{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingAffliations}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[label=\null,leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{tight_itemize}}
+\newcommand{\resumeItemListEnd}{\end{tight_itemize}\vspace{-10pt}}
+
+\newenvironment{tight_itemize}{
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+%----------HEADING-----------------
+\vspace*{-5mm}
+\centering\textbf{\huge Evan Waldmann}
+\vspace{1mm}
+
+\centering waldmannly.github.io {\textbullet} waldmannevan@knights.ucf.edu {\textbullet} 321-261-5090 
+
+\centering 27040 Lake Lena Lane, Mount Dora FL, 32757 
+
+
+
+\vspace{-5mm}
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Burnett Honors College at the University of Central Florida}{Orlando, FL}
+      {Bachelor of Science in Mathematics with minors in Computer Science and Statistics}{Spring 2019}
+ \resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+ \vspace*{-2.5mm}
+\resumeSubheadingAffliations{GPA: 3.940}{}
+\resumeSubHeadingListEnd  
+  
+        
+%  \vspace{-1.5em}
+     %-----------AWARDS AND AFFLIATIONS-----------------
+\section{Awards and Affliations}
+
+\resumeSubHeadingListStart
+\begin{small}
+\resumeSubheadingAffliations{Carolyn Euliano Endowed Scholarship in Mathematics}{Fall 2018}
+\resumeSubheadingAffliations{Harvard Forest Summer REU Program in Ecology}{Summer 2018}
+\resumeSubheadingAffliations{COMAP MCM Honorable Mention (Problem B)}{Spring 2018}
+\resumeSubheadingAffliations{UCF FURC Travel Award}{Spring 2018}
+\resumeSubheadingAffliations{UCF Collegiate Mathematical Society JMM Travel Award}{Fall 2017}
+\resumeSubheadingAffliations{UCF Summer Undergraduate Research Fellowship (declined)}{Summer 2017}
+\resumeSubheadingAffliations{Mathematics Exchange Student at the Royal Melbourne Institute of Technology (RMIT)}{Fall 2016}
+\resumeSubheadingAffliations{Honors Scholarship}{Fall 2015}
+\resumeSubheadingAffliations{Bright Futures Florida Academic Scholars}{Fall 2015}
+\resumeSubheadingAffliations{UCF Pegasus Scholarship}{Fall 2015}
+\end{small}
+\resumeSubHeadingListEnd
+
+%\hspace{-35mm} Mathematics Exchange Student at the Royal Melbourne Institute of Technology (RMIT) Fall 2016
+%•	Participated in UCF’s Math Exchange Program with RMIT for one semester
+%•	Enrolled and received High Distinctions in 4 upper level math courses 
+%•	Adapted to an unfamiliar environment and embraced cultural differences
+
+
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+  	\resumeSubheading
+	{Harvard University}{Petersham, MA}
+	{NSF Funded Research Intern at Harvard Forest REU \textup{\small(Advisor: Jonathan Thompson)}}{Summer 2018}
+		\resumeItemListStart
+		%\item{\small NSF funded REU student working in the Thompson Lab}
+		\item{\small Worked with landscape models to predict how forest disturbances could influence forest composition}
+		\item{\small Modeled dynamic human response to fire in LANDIS-II with R and ArcMap}
+		\resumeItemListEnd
+	\vspace{1mm}
+    \resumeSubheading
+      {Ellucian}{Maitland, FL}
+      {Process Support Intern}{Summer 2017}
+      \resumeItemListStart
+        \item{\small Analyzed existing project data to provide metrics on past projects}
+        \item{\small Documented and elaborated on requirements for reusable data migration template}
+        \item{\small Optimized data migration prototypes through analysis of system structure}        
+      \resumeItemListEnd
+\vspace{-1em}
+\vspace{-.05mm}
+	\resumeSubheading 
+	{}{}
+	{Campus Ambassador at UCF}{Spring 2018}
+	\resumeItemListStart
+		\item{\small Communicated Ellucian's brand and opportunities to UCF students}
+		\item{\small Preformed tasks such as hosting information sessions and providing contacts to recruiters}
+	\resumeItemListEnd
+		\vspace{1mm}
+
+  	\resumeSubheading
+	{University of Central Florida}{Orlando, FL}
+	{Research Assistant \textup{\small(Advisor: Jonathan Beever)}}{Spring 2017 - Fall 2018}
+		\resumeItemListStart
+		\item{\small Preformed data analysis and data visualizations of soundscape recordings in R}
+		\item{\small Preparing paper for publication}
+	\resumeItemListEnd
+	
+  \resumeSubHeadingListEnd
+   
+   
+   %Ellucian									               
+%Process Support Intern								Summer 2017
+%•	Analyzed existing project data to provide metrics on past projects
+%•	Documented and elaborated on requirements for reusable data migration template
+%•	Optimized data migration prototypes through analysis of system structure
+%		Campus Ambassador at UCF							   Spring 2018		
+%•	Communicated Ellucian’s brand and opportunities to UCF students
+%•	Preformed tasks such as hosting information sessions and providing contacts to recruiters
+%
+%Soundscape Ecology Research 						       	   Orlando, FL
+%Member of Jonathan Beever’s UCF research team			        Spring 2017 – Spring 2018
+%•	Preformed data analysis and data visualizations for soundscape recordings in R
+%•	Currently writing a paper on the results and implications of analysis
+% 
+%
+%Harvard Forest								            Petersham, MA
+%Summer Intern							              		 Summer 2018
+%•	Will work as a member of the Thompson Lab doing ecology modeling
+%
+   
+   
+   %-----------Presentations-----------------
+\section{Conferences}
+\resumeSubHeadingListStart
+
+\begin{small}
+\resumeSubheadingAffliations{\normalsize\textbf{Poster Presentations}}{}
+\resumeSubheadingAffliations{UCF Showcase of Undergraduate Research Excellence (SURE)}{Spring 2018}
+\resumeSubheadingAffliations{Florida Undergraduate Research Conference (FURC)}{Spring 2018}
+\end{small}
+\vspace{-3mm}
+\begin{small}
+\resumeSubheadingAffliations{\normalsize\textbf{Attended}}{}
+\resumeSubheadingAffliations{Frontiers of Mathematical Biology: Modeling, Computation and Analysis}{Spring 2018}
+\resumeSubheadingAffliations{Joint Mathematics Meeting (JMM)}{Spring 2018}
+\resumeSubheadingAffliations{IEEE MIT Undergraduate Research Technology Conference}{Fall 2017}
+\end{small}
+\resumeSubHeadingListEnd
+
+%•	Attended the 2017 IEEE MIT Undergraduate Research Technology Conference
+%•	Attended the 2018 Joint Mathematics Meeting  
+%•	Presented a poster at Florida Undergraduate Research conference (FURC 2018)
+%•	Presented a poster at UCF’s 2018 Showcase of Undergraduate Research Excellence (SURE) 
+%
+%   
+   
+  
+     %-----------Leadership and Outreach-----------------
+\section{Leadership and Outreach}
+
+\resumeSubHeadingListStart
+
+\begin{small}
+\resumeSubheadingAffliations{\normalsize\textbf{Student Organizations}}{}
+\resumeSubheadingAffliations{STRONG Mentor, UCF}{Fall 2018 - Spring 2019}
+\resumeSubheadingAffliations{President, Collegiate Mathematical Society}{Fall 2018 - Spring 2019}
+\resumeSubheadingAffliations{Coordinator, ACM SIGAI, UCF Chapter}{Fall 2018 - Spring 2019}
+\resumeSubheadingAffliations{Member, Pu Mu Epsilon, UCF Chapter}{Spring 2018}
+\resumeSubheadingAffliations{Member, IEEE}{Fall 2017}
+\end{small}
+\vspace{-3mm}
+\begin{small}
+\resumeSubheadingAffliations{\normalsize\textbf{Volunteering}}{}
+\resumeSubheadingAffliations{Habitat for Humanity, Ellucian }{Summer 2017}
+\resumeSubheadingAffliations{Teaching student success lessons to Title 1 Orange County Public Schools, UCF Honors Symposium}{Fall 2015}
+\end{small}
+\resumeSubHeadingListEnd
+  
+%\resumeSubheadingAffliations{Pi Mu Eplison Member}{Spring 2018}
+%\resumeSubheadingAffliations{IEEE Member}{Fall 2017}
+%
+
+%UCF Collegiate Mathematical Society 						   Orlando, FL
+%Member								              Fall 2015- Spring 2018
+%•	Participated in biweekly club meetings and weekly math biology seminars
+%•	Competed in COMAP MCM (mathematical modeling contest) (2017, 2018) 
+%•	Member of Pi Mu Epsilon (National Mathematics Honor Fraternity)
+%
+%UCF Special Interest Group on Artificial Intelligence (SIGAI)		      	   Orlando, FL
+%Member								        Spring 2017 – Spring 2018
+%•	Participated in weekly meetings to learn about theory and implementation of AI 
+%
+
+
+%-----------EXPERIENCE-----------------
+%\section{Course Work}
+%  \resumeSubHeadingListStart
+%    \resumeSubItem{Robot Vision}
+%      {Image filtering; edge detection; motion and optical flow; object detection and tracking; shape analysis, and statistical shape models; deep learning for robot vision}
+%    \resumeSubItem{Evolutionary Computation}
+%      {Genetic algorithm theory/construction; neural evolution; NEAT}
+%    \resumeSubItem{Computer Science 1\&2}
+%      {Data structures; sorting algorithms; runtime analysis; Java \& C}
+%    \resumeSubItem{Combinatorics}
+%    {Pigeonhole Principle applications; permutations/combinations; recurrence relations and generating functions; chains/antichains}
+%    \resumeSubItem{Graph Theory}
+%      {Graph algorithms; connectivity; graph colorings; maximum matchings; forbidden graphs; graph minors; planarity}
+%    \resumeSubItem{Stat Theory 1\&2}
+%      {Discrete \& continuous distributions; multivariate distributions; central limit theorem; functions of random variables; estimation and linear models/regression}
+%    \resumeSubItem{Probability \& Random Processes}
+%      {Probability theory; martingales; discrete-time stochastic processes; Markov chains; random walks}
+%    \resumeSubItem{Numerical Methods for Computational Sciences}
+%      {Numerical differentiation \& integration; adaptive quadrature; systems of linear equations; explicit \& implicit solving of PDEs; finite element methods}
+%  \resumeSubHeadingListEnd
+
+
+
+
+
+
+%%--------PROFESSIONAL EXPERIENCE------------
+%\section{Professional Experience}
+%  \resumeSubHeadingListStart
+%    
+%    \resumeSubheading
+%      {UCF's Department of Computer Science}{Orlando, FL}
+%      {Teaching Assistant for CS1}{Aug 2017 - May 2018}
+%      \resumeItemListStart
+%        \item{\small Taught fundamental CS concepts to students during office hours.}
+%        \item{\small Assisted in code critiques/debugging for students.}
+%        \item{\small Grading of exams and assignments.}
+%      \resumeItemListEnd
+%
+%  \resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+ \resumeSubHeadingListStart
+    \item{
+     \textbf{Languages}{: R, Java, Matlab, LaTeX, C\#, C, C++, Python, VBA for Excel, Haskell}
+     \hfill
+    }
+    \vspace{-2.5mm}
+    \item{
+    \textbf{Software/Packages}{: ArcMap, Photoshop, Git, raster (R), sp (R), ggplot2 (R)}
+    \hfill
+    }
+ \resumeSubHeadingListEnd
+
+
+\newpage
+ 
+
+%%-----------PROJECTS-----------------
+\section{Projects}
+	\resumeSubHeadingListStart
+		\resumeSubItem{Dynamic Human Response in LANDIS-II}
+			{Stuff}
+		\resumeSubItem{Modeling Extinct Languages (COMAP Problem B 2018)}
+			{Stuff}
+		\resumeSubItem{Soundscape Ecology Research}
+			{Stuff}
+		\resumeSubItem{Cholera Modeling Research}
+			{Stuff}
+		\resumeSubItem{Elephant population dynamics?}
+			{Stuff}
+		\resumeSubItem{}
+			{Stuff}
+		
+	\resumeSubHeadingListEnd
+
+
+%%-------------------------------------------
+\end{document}

@@ -1,0 +1,6 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{Background}{2}{0}{1}
+\beamer@sectionintoc {2}{Background}{2}{0}{2}
+\beamer@sectionintoc {3}{Climate Scenarios}{9}{0}{3}
+\beamer@sectionintoc {4}{Simulating Human Response to Fire}{12}{0}{4}
+\beamer@sectionintoc {5}{Putting the Pieces Together}{22}{0}{5}
