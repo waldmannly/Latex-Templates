@@ -1,0 +1,216 @@
+
+\documentclass[10pt]{article}
+
+\usepackage[margin=.75in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\DontPrintSemicolon  
+
+\newcommand{\R}{\mathbb{R}}  
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+
+\usepackage{mathtools}
+
+\usepackage[T1]{fontenc}
+\usepackage{titling}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{enumitem}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=2mm,
+  belowskip=2mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+}
+
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+%gets rid of qed symbol
+\renewcommand{\qedsymbol}{}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\begin{document}
+	
+	
+	
+	
+	% ------------------------------------------ %
+	%                 START HERE                 %
+	% ------------------------------------------ %
+	\setlength{\topmargin}{0in}
+	
+	\setlength{\droptitle}{-13em} 
+	\title{Homework 4} % Replace X with the appropriate number
+	\author{Evan Waldmann\\COP 3503H} % Replace "Author's Name" with your name
+	
+	\maketitle
+	
+	% -----------------------------------------------------
+	% The following two environments (theorem, proof) are
+	% where you will enter the statement and proof of your
+	% first problem for this assignment.
+	%
+	% In the theorem environment, you can replace the word
+	% "theorem" in the \begin and \end commands with
+	% "exercise", "problem", "lemma", etc., depending on
+	% what you are submitting. Replace the "x.yz" with the
+	% appropriate number for your problem.
+	%
+	% If your problem does not involve a formal proof, you
+	% can change the word "proof" in the \begin and \end
+	% commands with "solution".
+	% -----------------------------------------------------
+	
+	\begin{problem}{1}
+		 Give an efficient dynamic programming algorithm to find the longest palindrome that is a sub-sequence of a given input string. 
+	\end{problem}
+	
+\begin{enumerate}[label=(\alph*)]
+
+\item Characterize longest palindrome.\newline
+The longest palindrome will be the longest common sub-sequence that appears the same when read in reverse. The length of a sub-sequence that is a palindrome can be characterized by,
+
+\[ \textup{table}[i,j] = \left\{
+\begin{array}{ll}
+      1 & \quad i = j \\
+      2 & \quad i=j-1 \textup{ \& }  \textup{str}[i] = \textup{str}[j]  \\
+      \textup{table}[i+1,j-1] +2  & \quad i<j-1 \textup{ \& }  \textup{str}[i] = \textup{str}[j] \\
+      MAX(\textup{table}[i,j-1], \textup{table}[i+1,j])  & \quad i<j-1 \textup{ \& }  \textup{str}[i] \neq \textup{str}[j] \\
+\end{array} 
+\right. \]
+
+\item Define a recursive solution.\newline
+	\begin{algorithm}
+		\underline{function rec-Sol}(str[$1..n$],$i$,$j$)\;
+		
+		\uIf{$i==j$}{
+			return $1$\;
+		}
+			
+		\uIf{\textup{str[$i$]}$ ==$ \textup{str[$j$]} }{
+			\uIf{$i == j-1$ }{
+				return $2$\; 	
+			}
+			\uElse{
+				return rec-Sol(str, $i+1$,$j-1$) $+ 2$
+			}			
+			
+		}
+		\Else{
+			return $MAX$(rec-Sol(str, $i+1$,$j$) , rec-Sol(str, $i$,$j-1$))\;	
+		}			
+	\end{algorithm}
+
+\item Compute the length of a longest palindrome sub-sequence.\newline
+	\begin{algorithm}
+		\underline{function Longest-Palindrome}(str[$1..n$])\;
+		Let table[$1..n$,$1..n$] be a two dimensional array\;
+		
+	
+		\For{$r \gets 0 \textbf{\upshape{ to }}  n$}{
+			table[$r$][$r$]  $\gets 1$\;
+		}
+		
+		\For{$i \gets 2 \textbf{\upshape{ to }}  n$}{
+			\For{$r \gets 0 \textbf{\upshape{ to }}  n-i+1$}{
+				$c \gets r+i-1$	\;			
+				\uIf{\textup{str[$r$]}$ ==$ \textup{str[$c$]} $\&$ $i==2$ }{
+					table[$r$][$c$] $\gets 2$\; 
+				}
+				\uElseIf{\textup{str[$r$]} $==$ \textup{str[$c$]}}{
+					table[$r$][$c$] $\gets$ table[$r+1$][$c-1$] $+2$\; 
+				}
+				\Else{
+					table[$r$][$c$]  $\gets$ $MAX$(table[$r$][$c-1$] , table[$r+1$][$c$])\;	
+				}			
+			}		
+		}
+		
+		return table[$0$][$n-1$]\;
+	\end{algorithm}
+	
+	\newpage
+\item Construct a longest palindrome sub-sequence. (assume that table[$0$][$n-1$] is even)\newline
+	\begin{algorithm}
+		\underline{function Generate-LPS}(str[$1..n$], table[$1..n$,$1..n$])\;
+		Let result be an empty string\;		
+		end $\gets$ table[$0$][$n-1$]\;	
+		$r \gets 0$\;
+		$c \gets n-1$\;	
+		
+		\While{\textup{end}$\geq 0$ $\&$ $r \leq c$}{
+			
+				\uIf{ \textup{str[$r$]} $==$ \textup{str[$c$]}}{
+					result $\cup$ str[$r$]\;					
+					end$--$\;					
+					$r++$\;
+					$c--$\;
+				}   
+				\Else{
+					\uIf{\textup{table[$r+1$][$c$]} $>$ \textup{table[$r$][$c-1$]}}{
+						$r++$\;
+					}
+					\Else{
+						$c--$\;
+					}				
+				}
+			}
+		
+			$r\gets0$\;
+			$ m$ $\gets$ table[$0$][$n-1$]$/2$\;
+			$c \gets n - 1$\;
+			\While{$c \geq m$}
+			{
+				result[$r$] $\gets$ result[$c$]\;
+				$r++$\;
+				$c--$\;
+			}
+		return result\;
+		
+	\end{algorithm}
+	
+	
+\item The running time of the algorithm is $\Theta(n^2)$.
+\end{enumerate}
+
+\newpage 
+\begin{problem}{2}
+Java implementation of Longest Common Palindrome Sub-sequence with examples. 
+\end{problem}
+
+\lstinputlisting[language=Java]{LCSpalindrome.java}
+Output from the code above: 
+\lstinputlisting[language={}]{output.txt}
+
+\end{document}

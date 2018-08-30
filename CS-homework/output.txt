@@ -1,0 +1,9 @@
+Longest commmon palindrome of character is carac
+Longest commmon palindrome of BBABCBCAB is BABCBAB
+Longest commmon palindrome of aibohphobia is aibohphobia
+Longest commmon palindrome of racecar is racecar
+Longest commmon palindrome of one is o
+Longest commmon palindrome of palindrome is p
+Longest commmon palindrome of input is i
+Longest commmon palindrome of example is exe
+Longest commmon palindrome of sequence is eqe
