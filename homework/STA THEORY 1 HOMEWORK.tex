@@ -1,0 +1,199 @@
+
+
+
+
+% -----------------------------------------------
+% The preamble that follows can be ignored. Go on
+% down\textbf{\upshape{to}} the section that says "START HERE" 
+% -----------------------------------------------
+
+\documentclass[10pt]{article}
+
+
+\usepackage[margin= 1.25 in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+%usepackage[linesnumbered,ruled]{algorithm2e}
+%DontPrintSemicolon  
+
+\newcommand{\R}{\mathbb{R}}  
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+
+\usepackage{mathtools}
+
+\usepackage[T1]{fontenc}
+\usepackage{titling}
+\usepackage{lmodern}
+
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+%gets rid of qed symbol
+\renewcommand{\qedsymbol}{}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+		\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\begin{document}
+	
+	% ------------------------------------------ %
+	%                 START HERE                 %
+	% ------------------------------------------ %
+	\setlength{\topmargin}{0in}
+	
+	\setlength{\droptitle}{-10em} 
+	\title{ STATISTICAL THEORY I (STA 4321): Homework 1 }
+	\author{Evan Waldmann} %	
+	\maketitle
+	
+	% -----------------------------------------------------
+	% The following two environments (theorem, proof) are
+	% where you will enter the statement and proof of your
+	% first problem for this assignment.
+	%
+	% In the theorem environment, you can replace the word
+	% "theorem" in the \begin and \end commands with
+	% "exercise", "problem", "lemma", etc., depending on
+	% what you are submitting. Replace the "x.yz" with the
+	% appropriate number for your problem.
+	%
+	% If your problem does not involve a formal proof, you
+	% can change the word "proof" in the \begin and \end
+	% commands with "solution".
+	% -----------------------------------------------------
+	
+	\begin{problem}{1.1}
+	For each of the following situations, identify the population of interest, the inferential objective, and how you might go about collecting a sample. 
+	\end{problem}
+	
+	
+	\begin{solution}\quad\newline
+	\textbf{a) The National Highway Safety Council wants to estimate the proportion of automobile tires with unsafe tread among all tires manufactured by a specific company during the current}
+production year.
+	\begin{itemize}
+	\item Population: All tires manufactured by the specific company during the current production year
+	\item Objective: To determine the proportion of the population with unsafe tread
+	\item Sampling Method: Take an independent random sample of the population
+	\end{itemize}
+		\textbf{b) A political scientist wants to determine whether a majority of adult residents of a state favor
+a unicameral legislature.}
+	\begin{itemize}
+	\item Population: Adult residents of a state
+	\item Objective: To determine if there is a majority of the population that favor a unicameral legislature
+	\item Sampling Method: Take an independent random sample of the population
+	\end{itemize}
+		\textbf{c) A medical scientist wants to estimate the average length of time until the recurrence of a certain disease.}
+	\begin{itemize}
+	\item Population: People infected with the certain disease
+	\item Objective: To estimate average length of time until recurrence of the certain disease in the population
+	\item Sampling Method: Take an independent random sample of the population
+	\end{itemize}
+		\textbf{d) An electrical engineer wants to determine whether the average length of life of transistors of a certain type is greater than 500 hours.}
+	\begin{itemize}
+	\item Population: Transistors of a certain type 
+	\item Objective:  To determine whether the average life span of the population is greater than 500 hours
+	\item Sampling Method: Take an independent random sample of the population
+	\end{itemize}
+		\textbf{e) A university researcher wants to estimate the proportion of U.S. citizens from “Generation X” who are interested in starting their own businesses.}
+	\begin{itemize}
+	\item Population: Generation X
+	\item Objective: To estimate the proportion of the population who are interested in starting their own businesses
+	\item Sampling Method: Take an independent random sample of the population
+	\end{itemize}
+		\textbf{f) For more than a century, normal body temperature for humans has been accepted to be 98.6 Fahrenheit. Is it really? Researchers want to estimate the average temperature of healthy adults in the United States.}
+	\begin{itemize}
+	\item Population: Healthy adults in the United States
+	\item Objective: To estimate the average temperature of the population (and I am assuming that the overall goal is see if that estimate differs from 98.6) 
+	\item Sampling Method: Take an independent random sample of the population
+	\end{itemize}
+		\textbf{g) A city engineer wants to estimate the average weekly water consumption for single-family dwelling units in the city.}
+	\begin{itemize}
+	\item Population: All single-family dwelling units in the city
+	\item Objective: To estimate the average weekly water consumption of the population
+	\item Sampling Method: Take an independent random sample of the population
+	\end{itemize}
+    \end{solution}
+	
+	
+	% -----------------------------------------------------
+	% Second problem
+	% -----------------------------------------------------
+	
+	\vspace{0.15in} % This just adds some space between problems 1 and 2.
+	
+	\begin{problem}{1.10}
+	It has been projected that the average and the standard deviation of the amount of time spent online using the Internet are, respectively, 14 and 17 hours per person per year (many do not use the internet at all!) 
+	\end{problem}
+	
+	\begin{solution}\quad\newline
+        \textbf{a)} 17-14 = -3
+        \newline\textbf{b)} 1-.5-.34 =  .16
+        \newline\textbf{c)}No. The for the data to be normally distributed, the data has to follow the Empirical Rule, which requires that 68\% of the data falls within the first standard deviation from the mean, 95\% of the data falls withing two standard deviations from the mean, and 99.7\% of the data falls within three standard deviations from the mean. If the data were normally distributed, we would expect to find about 16\% of the data to be below -3, which is impossible because you cannot have a negative number of hours of time spent online per person per year.
+        
+	\end{solution}
+	
+	% -----------------------------------------------------
+	% Third problem
+	% -----------------------------------------------------
+	
+	\vspace{0.15in} % This adds some space between problems 2 and 3.
+	
+	\begin{problem}{1.11}
+	Use (a), (b), and (c) to show that \newline
+	$$s^2 = \frac{1}{n-1}\sum_{i=1}^{n} (y_{i} - \bar{y})^2 = \frac{1}{n-1}\Bigg[\sum_{i=1}^{n} y_{i}^{2} - \frac{1}{n}\Big(\sum_{i=1}^{n}y_{i}\Big)^2\Bigg]$$
+	\end{problem}
+    
+    \begin{solution}\quad\newline
+    \begin{equation}\nonumber
+\begin{split}
+    s^2 &= \frac{1}{n-1}\sum_{i=1}^{n}(y_{i} - \bar{y})^2\\
+    & =\Big(\frac{1}{n-1}\Big)\sum_{i=1}^{n}\Big(y_i^2 -2y_i \bar y + \bar y^2 \Big)\\
+    & =\frac{1}{n-1}\Big[\sum_{i=1}^{n}y_i^2 - 2\bar y\sum_{i=1}^n y_i + n(\bar y) ^2\Big]\\
+    &= \frac{1}{n-1}\Big[\sum_{i=1}^{n}y_i^2 -  \frac{2}{n}\big(\sum_{i=1}^{n}y_i\big)^2 + \frac{1}{n}\big(\sum_{i=1}^{n}y_i\big)^2\Big]\\
+    &= \frac{1}{n-1}\Bigg[\sum_{i=1}^{n} y_{i}^{2} - \frac{1}{n}\Big(\sum_{i=1}^{n}y_{i}\Big)^2\Bigg]
+    \end{split}
+\end{equation}
+
+    \end{solution}
+	
+	
+	% -----------------------------------------------------
+	% Fourth problem
+	% -----------------------------------------------------
+	
+	\vspace{0.25in} % This adds some space between problems 2 and 3.
+	
+	\begin{problem}{1.22}
+		Prove that the sum of the deviations of a set of measurements about their mean is equal to zero; that is, \newline
+		$$ \sum_{i=1}^{n}(y_{i} - \bar y) = 0 $$
+		
+	\end{problem}
+	
+\begin{proof}
+\begin{equation}\nonumber
+\begin{split}
+ & \sum_{i=1}^{n}(y_{i} - \bar y)\\
+ & = \sum_{i=1}^{n} y_i - \sum_{i=1}^{n}\bar y \\
+ & = \sum_{i=1}^{n} y_i - {n}\bar y\\
+  & = \sum_{i=1}^{n} y_i - {n} \frac{1}{n}\sum_{i=1}^{n} y_i \\
+    & = \sum_{i=1}^{n} y_i - \sum_{i=1}^{n} y_i \\
+ & = 0\\
+\end{split}
+\end{equation}
+
+\end{proof}
+	
+\end{document}
