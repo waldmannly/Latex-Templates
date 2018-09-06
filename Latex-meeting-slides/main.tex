@@ -17,6 +17,9 @@
 \usetheme{CambridgeUS}
 \useinnertheme{rectangles}
 \useoutertheme{infolines}
+\usepackage{xcolor}
+\usepackage{listings}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %this adds in the circles to the right of background
@@ -188,7 +191,7 @@ If you decide to pay dues, you get a t-shirt,  are eligible to apply for JMM tra
 \end{center}
 \end{colorframe}
 
-\begin{frame}{Joint Meeting in Mathematics (JMM)} 
+\begin{frame}{Joint Meeting in Mathematics (JMM) Information} 
 
 \end{frame}
 
@@ -211,21 +214,53 @@ Applications due in December, but it is usually a good idea to have them done be
 
 \begin{frame}{What is LaTeX?}
 
+\centering \LaTeX is a document preparation system created in 1983. 
+
+\vfill
+\small{"\LaTeX is widely used in academia for the communication and publication of scientific documents in many fields, including mathematics, statistics, computer science, engineering, chemistry, physics, economics, linguistics, quantitative psychology, philosophy, and political science." - Wikipedia}
+
+\vfill 
+\centering \textbf{lay-tech or lah-tech but definitely not latex}
+
 \end{frame}
 
-\begin{frame}{Why Should You Care?}
+\begin{frame}{Why would you use LaTeX?}
+\begin{itemize}
+\item You want to focus on content only,
+\item You want to produce a heavily customized document, or 
+\item You need to type up mathematics symbols in a report or assignment. 
+\end{itemize}
+
+
+\centering \includegraphics[width =.8\linewidth]{timeVeffort.png}
 
 \end{frame} 
 
 \begin{frame}{Some Examples} 
 
+\centering \Large \textbf{\color{blue} https://github.com/waldmannly/Latex-Templates}
+
+\vfill
+\begin{center}
+\centering Online editors: Overleaf/ShareTeX 
+
+
+\centering Local editors: TeX Maker and MikTeX
+\end{center}
 \end{frame}
 
 \begin{frame}{Some Basics} 
-
+\lstset{language=TeX}
+\scriptsize\lstinputlisting{simplefile.tex}
 \end{frame}
 
 \begin{frame}{Go Forth and Practice} 
+
+You should either try to convert your resume or type up a homework assignment. The officers (, Google,) and I will be available until the end of the meeting for question about syntax or the weird \LaTeX quarks (try to put a space in an equation and see what happens). 
+
+\vfill 
+
+Also check out the templates hosted on Overleaf. 
 
 \end{frame}
 
