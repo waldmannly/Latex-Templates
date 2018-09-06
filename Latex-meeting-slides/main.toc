@@ -1,0 +1,3 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {1}{House Keeping}{2}{0}{1}
+\beamer@sectionintoc {2}{LaTeX}{6}{0}{2}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.21)  6 SEP 2018 18:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6745 64-bit) (preloaded format=pdflatex 2018.8.21)  6 SEP 2018 18:43
 entering extended mode
 **./main.tex
 (main.tex
@@ -1210,128 +1210,131 @@ LaTeX Font Info:    Font shape `T1/lato-TLF/m/n' will be
  [1
 
 {C:/Users/evan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<CMSminusparagraph.png, id=36, 585.1461pt x 433.62pt>
-File: CMSminusparagraph.png Graphic file (type png)
-<use CMSminusparagraph.png>
-Package pdftex.def Info: CMSminusparagraph.png  used on input line 172.
-(pdftex.def)             Requested size: 273.83728pt x 202.92804pt.
-
-Overfull \hbox (28.4906pt too wide) has occurred while \output is active
-[]   [] [] [] [] [] [] [] [] 
+Overfull \hbox (17.09436pt too wide) has occurred while \output is active
+[]   [] [] [] [] [] [] 
  []
 
 [2
 
- <./CMSminusparagraph.png>]
+]
+<tshirtbackdarkerblack.png, id=59, 528.47438pt x 676.77844pt>
+File: tshirtbackdarkerblack.png Graphic file (type png)
+<use tshirtbackdarkerblack.png>
+Package pdftex.def Info: tshirtbackdarkerblack.png  used on input line 189.
+(pdftex.def)             Requested size: 128.29599pt x 164.30028pt.
 LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 18
-5.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptmcm.fd"
+9.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptmcm.fd"
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+psycm on input line 18
-5.
+9.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omxpsycm.fd"
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 185.
+LaTeX Font Info:    Try loading font information for U+msa on input line 189.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 185.
+LaTeX Font Info:    Try loading font information for U+msb on input line 189.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 189.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 185.
+(Font)              scaled to size 9.85492pt on input line 189.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 185.
+(Font)              scaled to size 7.19995pt on input line 189.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 5.39996pt on input line 185.
+(Font)              scaled to size 5.39996pt on input line 189.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 185.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 189.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 9.85492pt on input line 185.
+(Font)              scaled to size 9.85492pt on input line 189.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 185.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 189.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 7.19995pt on input line 185.
+(Font)              scaled to size 7.19995pt on input line 189.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 185.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 189.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 5.39996pt on input line 185.
+(Font)              scaled to size 5.39996pt on input line 189.
+<UCF_CMS_LOGO_tshirttrans.png, id=61, 2055.68pt x 1402.23875pt>
+File: UCF_CMS_LOGO_tshirttrans.png Graphic file (type png)
+<use UCF_CMS_LOGO_tshirttrans.png>
+Package pdftex.def Info: UCF_CMS_LOGO_tshirttrans.png  used on input line 189.
+(pdftex.def)             Requested size: 164.30028pt x 112.05301pt.
 
-Overfull \hbox (28.4906pt too wide) has occurred while \output is active
-[]   [] [] [] [] [] [] [] [] 
+Overfull \hbox (17.09436pt too wide) has occurred while \output is active
+[]   [] [] [] [] [] [] 
  []
 
 [3
 
-]
-LaTeX Font Info:    Font shape `T1/lato-TLF/bx/n' in size <10.95> not available
-
-(Font)              Font shape `T1/lato-TLF/b/n' tried instead on input line 19
-5.
-LaTeX Font Info:    Font shape `T1/lato-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 195.
-
-Overfull \hbox (28.4906pt too wide) has occurred while \output is active
-[]   [] [] [] [] [] [] [] [] 
+ <./tshirtbackdarkerblack.png> <./UCF_CMS_LOGO_tshirttrans.png>]
+Overfull \hbox (17.09436pt too wide) has occurred while \output is active
+[]   [] [] [] [] [] [] 
  []
 
 [4
 
 ]
-<tshirtbackdarkerblack.png, id=81, 528.47438pt x 676.77844pt>
-File: tshirtbackdarkerblack.png Graphic file (type png)
-<use tshirtbackdarkerblack.png>
-Package pdftex.def Info: tshirtbackdarkerblack.png  used on input line 212.
-(pdftex.def)             Requested size: 128.29599pt x 164.30028pt.
-<UCF_CMS_LOGO_tshirttrans.png, id=82, 2055.68pt x 1402.23875pt>
-File: UCF_CMS_LOGO_tshirttrans.png Graphic file (type png)
-<use UCF_CMS_LOGO_tshirttrans.png>
-Package pdftex.def Info: UCF_CMS_LOGO_tshirttrans.png  used on input line 212.
-(pdftex.def)             Requested size: 164.30028pt x 112.05301pt.
+LaTeX Font Info:    Font shape `T1/lato-TLF/m/n' will be
+(Font)              scaled to size 10.0pt on input line 207.
+LaTeX Font Info:    Font shape `T1/lato-TLF/bx/n' in size <10> not available
+(Font)              Font shape `T1/lato-TLF/b/n' tried instead on input line 20
+7.
+LaTeX Font Info:    Font shape `T1/lato-TLF/b/n' will be
+(Font)              scaled to size 10.0pt on input line 207.
 
-Overfull \hbox (28.4906pt too wide) has occurred while \output is active
-[]   [] [] [] [] [] [] [] [] 
+Overfull \hbox (17.09436pt too wide) has occurred while \output is active
+[]   [] [] [] [] [] [] 
  []
 
 [5
 
- <./tshirtbackdarkerblack.png> <./UCF_CMS_LOGO_tshirttrans.png>]
-LaTeX Font Info:    Font shape `T1/lato-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 226.
-LaTeX Font Info:    Font shape `T1/lato-TLF/bx/n' in size <10> not available
-(Font)              Font shape `T1/lato-TLF/b/n' tried instead on input line 22
-6.
-LaTeX Font Info:    Font shape `T1/lato-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 226.
-
-Overfull \hbox (28.4906pt too wide) has occurred while \output is active
-[]   [] [] [] [] [] [] [] [] 
+]
+Overfull \hbox (22.79248pt too wide) has occurred while \output is active
+[]   [] [] [] [] [] [] [] 
  []
 
 [6
 
 ]
-LaTeX Font Info:    Font shape `T1/lato-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 239.
-
-Overfull \hbox (28.4906pt too wide) has occurred while \output is active
-[]   [] [] [] [] [] [] [] [] 
+Overfull \hbox (22.79248pt too wide) has occurred while \output is active
+[]   [] [] [] [] [] [] [] 
  []
 
 [7
+
+]
+Overfull \hbox (22.79248pt too wide) has occurred while \output is active
+[]   [] [] [] [] [] [] [] 
+ []
+
+[8
+
+]
+Overfull \hbox (22.79248pt too wide) has occurred while \output is active
+[]   [] [] [] [] [] [] [] 
+ []
+
+[9
+
+]
+Overfull \hbox (22.79248pt too wide) has occurred while \output is active
+[]   [] [] [] [] [] [] [] 
+ []
+
+[10
 
 ]
 \tf@nav=\write7
@@ -1343,28 +1346,28 @@ Overfull \hbox (28.4906pt too wide) has occurred while \output is active
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 243.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 243.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 234.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 234.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 243.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 243.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 234.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 234.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9C3873606DF5F51033C2AF1D25C8F3AD;98.
+(rerunfilecheck)             Checksum: 771F5540B005E4BC8013E9C09AAF2B6B;190.
  ) 
 Here is how much of TeX's memory you used:
- 30828 strings out of 492973
- 574747 string characters out of 3135935
- 654284 words of memory out of 3000000
- 34148 multiletter control sequences out of 15000+200000
- 774679 words of font info for 75 fonts, out of 3000000 for 9000
+ 30838 strings out of 492973
+ 574753 string characters out of 3135935
+ 653276 words of memory out of 3000000
+ 34153 multiletter control sequences out of 15000+200000
+ 730176 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,19n,74p,808b,960s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lato/a_w6akef.enc}<C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/lato/Lato-Bold.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/lato/Lato-Regular.pfb>
-Output written on main.pdf (7 pages, 1050815 bytes).
+Output written on main.pdf (10 pages, 231133 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
- 92 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
